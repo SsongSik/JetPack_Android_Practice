@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/JetPack_Android_Practice.iml" filepath="$PROJECT_DIR$/.idea/JetPack_Android_Practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DataBinding.iml" filepath="$PROJECT_DIR$/.idea/modules/DataBinding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/DataBinding.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/DataBinding.app.iml" />
     </modules>
   </component>
 </project>

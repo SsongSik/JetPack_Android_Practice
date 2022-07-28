@@ -26,7 +26,7 @@ class TestFragment : Fragment() {
         _binding = FragmentTestBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        binding.fragmentText.text = "이거는 fragment text"
+        binding.fragmentText.text = "testtext"
 
         return view
     }
