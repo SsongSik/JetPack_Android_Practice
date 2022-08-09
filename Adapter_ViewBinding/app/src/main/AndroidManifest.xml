@@ -10,17 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Adapter_ViewBinding">
         <activity
-            android:name=".viewBinding.ViewBindingActivity"
+            android:name=".dataBinding.DataBindingActivity"
+            android:exported="false" />
+        <!-- <activity -->
+        <!-- android:name=".viewBinding.ViewBindingActivity" -->
+        <!-- android:exported="true"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
         </activity>
     </application>
 

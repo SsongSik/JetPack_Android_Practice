@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 //ViewBinding DataBinding
 //RecyclerView Adapter
 
+//DataBinding + Adapter
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
