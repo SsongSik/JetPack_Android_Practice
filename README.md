@@ -33,3 +33,9 @@ Android practice using the Jetpack library
 <br>
 2-4. ViewModelFactory
 <br>
+<br>
+<h4>lecture3</h4>
+<br>
+3-1. LiveData
+<br>
+3-2. ViewModel With LiveData
