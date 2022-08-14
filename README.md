@@ -43,3 +43,5 @@ Android practice using the Jetpack library
 3-3. LiveData And MutableLiveData
 <br>
 3-4. Fragment LiveData / LifeCycleOwner
+<br>
+3-5. Map / SwitchMap
