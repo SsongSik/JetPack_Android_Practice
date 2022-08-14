@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.a3_fragmentlivedatalifecycleowner.databinding.FragmentBlank1Binding
@@ -18,7 +19,7 @@ class BlankFragment1 : Fragment() {
     private var _binding : FragmentBlank1Binding? = null
     private val binding get() = _binding!!
 
-    private lateinit var viewModel : BlankViewModel
+    private val viewModel : BlankViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +35,7 @@ class BlankFragment1 : Fragment() {
         _binding = FragmentBlank1Binding.inflate(inflater, container, false)
         val view = binding.root
 
-        viewModel = ViewModelProvider(this).get(BlankViewModel::class.java)
+//        viewModel = ViewModelProvider(this).get(BlankViewModel::class.java)
 
         return view
     }
