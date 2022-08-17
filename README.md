@@ -45,3 +45,5 @@ Android practice using the Jetpack library
 3-4. Fragment LiveData / LifeCycleOwner
 <br>
 3-5. Map / SwitchMap
+<br>
+3-6. ViewModel / LiveData / LifeCycleOwner + DataBinding
