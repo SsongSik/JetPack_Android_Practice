@@ -12,7 +12,6 @@ Android practice using the Jetpack library
 <br>
 <h2>Index</h2>
 <h4>lecture1</h4>
-<br>
 1-1. findViewById / Kotlin Extensions
 <br>
 1-2. ViewBinding
@@ -35,7 +34,6 @@ Android practice using the Jetpack library
 <br>
 <br>
 <h4>lecture3</h4>
-<br>
 3-1. LiveData
 <br>
 3-2. ViewModel With LiveData
@@ -47,3 +45,7 @@ Android practice using the Jetpack library
 3-5. Map / SwitchMap
 <br>
 3-6. ViewModel / LiveData / LifeCycleOwner + DataBinding
+<br>
+<br>
+<h4>lecture4</h4>
+4-1. Retrofit ?
