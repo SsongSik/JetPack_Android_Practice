@@ -9,15 +9,12 @@ import retrofit2.Response
 
 /*
 Retrofit2
-
 Server, LocalDB 에서 데이터를 받아옴
 (Retrofit), (ROOM)
-
 코틀린(Kotlin)
 코루틴(Coroutine)
 비동기적으로 실행되는 코드를 간소화하기 위해
 ViewModel, WorkManager + Coroutine
-
 Simple Retrofit Ex
 JSONPlaceholder
 https://jsonplaceholder.typicode.com/
