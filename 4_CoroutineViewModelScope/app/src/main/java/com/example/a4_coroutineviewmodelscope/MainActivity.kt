@@ -1,8 +1,10 @@
 package com.example.a4_coroutineviewmodelscope
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -17,14 +19,22 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Log.d("TEST", "START")
-        CoroutineScope(Dispatchers.IO).launch {
-            Log.d("TEST", "CoroutineScope START")
-            a()
-            b()
-            Log.d("TEST", "CoroutineScope END")
+        val goToSecond = findViewById<Button>(R.id.goToSecond)
+
+        goToSecond.setOnClickListener {
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
         }
-        Log.d("TEST", "END")
+
+
+//        Log.d("TEST", "START")
+//        CoroutineScope(Dispatchers.IO).launch {
+//            Log.d("TEST", "CoroutineScope START")
+//            a()
+//            b()
+//            Log.d("TEST", "CoroutineScope END")
+//        }
+//        Log.d("TEST", "END")
 
         //start -> end -> AP1 -> BP1 -> AP2 -> BP2
         //이런식으로 예상할 수 있음
