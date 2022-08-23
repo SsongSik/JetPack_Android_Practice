@@ -52,6 +52,6 @@ Android practice using the Jetpack library
 <br>
 4-2. CallBack Hell
 <br>
-4-3. Coroutine
+4-3. Coroutine / ViewModelScope
 <br>
 4-4. Retrofit Practice
