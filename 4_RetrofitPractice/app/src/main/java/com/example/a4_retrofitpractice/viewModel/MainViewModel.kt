@@ -8,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.a4_retrofitpractice.api.MyApi
 import com.example.a4_retrofitpractice.api.RetrofitInstance
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.plus
 
 class MainViewModel : ViewModel() {
 
@@ -36,4 +37,8 @@ class MainViewModel : ViewModel() {
         _mutableWord2.value = post.title
     }
 
+    fun getPostAll() = viewModelScope.launch {
+        val postAll = retrofitInstance.getPostALl()
+        Log.d("MainViewModel", postAll.toString())
+    }
 }
