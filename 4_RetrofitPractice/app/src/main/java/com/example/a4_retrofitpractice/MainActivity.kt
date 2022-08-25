@@ -7,6 +7,9 @@ import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.a4_retrofitpractice.adapter.CustomAdapter
 import com.example.a4_retrofitpractice.api.MyApi
 import com.example.a4_retrofitpractice.api.RetrofitInstance
 import com.example.a4_retrofitpractice.model.Post
@@ -29,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         viewModel.getPost1()
         viewModel.getPostNumber(3)
+        viewModel.getPostAll()
 
         val area1 = findViewById<TextView>(R.id.area1)
         val area2 = findViewById<TextView>(R.id.area2)
@@ -39,6 +43,14 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.liveWord2.observe(this, Observer {
             area2.text = it.toString()
+        })
+
+        val rv = findViewById<RecyclerView>(R.id.rv)
+
+        viewModel.liveWordList.observe(this, Observer {
+            val customAdapter = CustomAdapter(it as ArrayList<Post>)
+            rv.adapter = customAdapter
+            rv.layoutManager = LinearLayoutManager(this)
         })
 
     }
