@@ -55,3 +55,5 @@ Android practice using the Jetpack library
 4-3. Coroutine / ViewModelScope
 <br>
 4-4. Retrofit Practice + RecyclerView
+<br>
+4-5. Retrofit + ViewModelScope + RV + Glide
