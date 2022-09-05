@@ -3,8 +3,11 @@ package com.example.a6_workmanager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.lifecycle.Observer
+import androidx.work.Data
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
+import androidx.work.workDataOf
 
 /*
 WorkManager?
@@ -29,20 +32,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        SimpleTread().start()
+//        val workManagerA =  OneTimeWorkRequestBuilder<WorkManagerA>().build()
+//        WorkManager.getInstance(this).enqueue(workManagerA)
 
-        val workManagerA =  OneTimeWorkRequestBuilder<WorkManagerA>().build()
-        WorkManager.getInstance(this).enqueue(workManagerA)
-    }
-}
+        val myData : Data = workDataOf(
+            "a" to 10,
+            "b" to 20
+        )
 
-class SimpleTread : Thread(){
-    override fun run(){
-        super.run()
+        val workManagerB = OneTimeWorkRequestBuilder<WorkManagerB>().setInputData(myData).build()
+        WorkManager.getInstance(this).enqueue(workManagerB)
 
-        for(i in 1..10){
-            Log.d("MainActivty", "$i")
-            sleep(1000)
-        }
+        WorkManager.getInstance(this).getWorkInfoByIdLiveData(workManagerB.id)
+            .observe(this, Observer { info ->
+                if(info != null && info.state.isFinished){
+                    val result = info.outputData.getInt("result", 10000)
+                    val result2 = info.outputData.getInt("result", 20000)
+                    Log.d("MainActivity", result.toString())
+                    Log.d("MainActivity", result2.toString())
+                }
+            })
     }
 }
