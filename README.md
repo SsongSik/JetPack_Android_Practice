@@ -61,3 +61,5 @@ Android practice using the Jetpack library
 <br>
 <h4>lecture5</h4>
 5-1. SQLite
+<br>
+5-2. Room
