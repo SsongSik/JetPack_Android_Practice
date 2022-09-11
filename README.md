@@ -71,3 +71,5 @@ Android practice using the Jetpack library
 <br>
 <h4>lecture6</h4>
 6-1. WorkManager
+<br>
+6-2. WorkManager Sending, Receiver Data
