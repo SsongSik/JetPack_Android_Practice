@@ -77,3 +77,5 @@ Android practice using the Jetpack library
 6-3. WorkManager + Coroutines, Chaining
 <br>
 6-4. WorkManager + 작업진행률 관찰
+<br>
+6-5. WorkManager + 주기적작업, 고유작업
