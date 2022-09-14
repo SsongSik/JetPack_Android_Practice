@@ -79,3 +79,8 @@ Android practice using the Jetpack library
 6-4. WorkManager + 작업진행률 관찰
 <br>
 6-5. WorkManager + 주기적작업, 고유작업
+<br>
+<br>
+<h4>lecture7</h4>
+7-1. Navigation
+<br>
